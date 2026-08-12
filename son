@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⚠️ AURA 9999 ⚠️</title>
+<style>
+    * {margin:0; padding:0;}
+  body {background:black; overflow:hidden; font-family:Impact;}
+  video {width:100vw; height:100vh; object-fit:cover;}
+  h1 {
+    position:fixed; top:10vh; width:100%; text-align:center; 
+    color:red; font-size:10vw; z-index:999;
+    animation: rung 0.08s infinite, glow 1s infinite alternate;
+    text-shadow: 0 0 20px yellow;
+  }
+  @keyframes rung {0%{transform:translate(3px,3px)}50%{transform:translate(-3px,-3px)}100%{transform:translate(3px,3px)}}
+  @keyframes glow {from{text-shadow:0 0 20px yellow} to{text-shadow:0 0 50px red}}
+</style>
+</head>
+<body>
+
+<h1>DAD COMES IN<br>AURA 9999</h1>
+
+<video id="vid" src="aura.mp4" autoplay loop playsinline></video>
+
+<script>
+  window.onload = function() {
+    document.documentElement.requestFullscreen().catch(()=>{});
+    let v = document.getElementById('vid');
+    v.play(); v.volume = 1;
+  }
+  document.onclick = function() {document.getElementById('vid').play();}
+</script>
+
+</body>
+</html>
